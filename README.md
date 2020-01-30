@@ -1,7 +1,7 @@
 # AstMatTable
 
 ## Getting Started
-- Clone this repo: ``
+- Clone this repo: `git clone https://github.com/cherryApp/ast-mat-table.git`
 - Open repo folder: `cd ast-mat-table`
 - Install deps.: `npm i`
 - Install json-server: `npm i -g json-server`
