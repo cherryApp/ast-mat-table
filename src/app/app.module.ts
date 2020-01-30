@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 // Material modules.
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
+import { MatTableModule } from '@angular/material/table';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,6 +28,7 @@ import { BasicComponent } from './page/basic/basic.component';
     BrowserAnimationsModule,
     MatMenuModule,
     MatButtonModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

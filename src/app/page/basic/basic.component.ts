@@ -10,6 +10,14 @@ import { User } from 'src/app/model/user';
 export class BasicComponent implements OnInit {
 
   dataSource$: User[] = (this.userService.get() as unknown as User[]);
+  displayedColumns: string[] = [
+    'id',
+    'first_name',
+    'last_name',
+    'gender',
+    'email',
+    'address'
+  ];
 
   constructor(
     private userService: UserService,
