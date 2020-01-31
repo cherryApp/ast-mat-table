@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,13 +14,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavComponent } from './common/nav/nav.component';
 import { HomeComponent } from './page/home/home.component';
 import { BasicComponent } from './page/basic/basic.component';
+import { PaginatorComponent } from './page/paginator/paginator.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     HomeComponent,
-    BasicComponent
+    BasicComponent,
+    PaginatorComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +32,7 @@ import { BasicComponent } from './page/basic/basic.component';
     MatMenuModule,
     MatButtonModule,
     MatTableModule,
+    MatPaginatorModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
