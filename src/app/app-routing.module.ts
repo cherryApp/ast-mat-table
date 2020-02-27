@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './page/home/home.component';
 import { BasicComponent } from './page/basic/basic.component';
 import { PaginatorComponent } from './page/paginator/paginator.component';
+import { FilterComponent } from './page/filter/filter.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'paginator',
     component: PaginatorComponent,
+  },
+  {
+    path: 'filter',
+    component: FilterComponent,
   },
   {
     path: '**',

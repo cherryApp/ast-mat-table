@@ -15,6 +15,7 @@ import { NavComponent } from './common/nav/nav.component';
 import { HomeComponent } from './page/home/home.component';
 import { BasicComponent } from './page/basic/basic.component';
 import { PaginatorComponent } from './page/paginator/paginator.component';
+import { FilterComponent } from './page/filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PaginatorComponent } from './page/paginator/paginator.component';
     NavComponent,
     HomeComponent,
     BasicComponent,
-    PaginatorComponent
+    PaginatorComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,
