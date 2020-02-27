@@ -24,11 +24,18 @@ export class FilterComponent implements OnInit, OnDestroy {
   pageSizes: number[] = [5, 10, 25, 100];
   dataSubscription: Subscription;
 
+  currentFilterKey: string;
+
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
 
   constructor(
     private userService: UserService,
   ) { }
+
+  applyFilter(event: Event): void {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
 
   ngOnInit() {
     this.dataSource.paginator = this.paginator;
@@ -37,6 +44,12 @@ export class FilterComponent implements OnInit, OnDestroy {
         this.dataSource.data = (users as unknown as User[]);
       }
     );
+
+    this.dataSource.filterPredicate = (data: User, filter: string) => {
+      const key = this.currentFilterKey || '';
+      const source = key ? String(data[key]) : JSON.stringify(data);
+      return source.toLowerCase().includes(filter.toLowerCase());
+    };
   }
 
   ngOnDestroy() {
