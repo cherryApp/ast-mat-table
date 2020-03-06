@@ -1,76 +1,12 @@
 {
   "users": [
     {
-      "id": 1,
-      "first_name": "Earle",
-      "last_name": "Southam",
-      "email": "esoutham0@mtv.com",
-      "gender": "Male",
-      "address": "136 Westport Park"
-    },
-    {
-      "id": 2,
-      "first_name": "Phyllis",
-      "last_name": "Chisholme",
-      "email": "pchisholme1@yahoo.co.jp",
-      "gender": "Female",
-      "address": "7707 Miller Street"
-    },
-    {
-      "id": 3,
-      "first_name": "Cally",
-      "last_name": "O'Sheilds",
-      "email": "cosheilds2@technorati.com",
-      "gender": "Female",
-      "address": "47 Marquette Alley"
-    },
-    {
-      "id": 4,
-      "first_name": "Stefano",
-      "last_name": "Lett",
-      "email": "slett3@networksolutions.com",
-      "gender": "Male",
-      "address": "6303 Debra Plaza"
-    },
-    {
-      "id": 5,
-      "first_name": "Lizzie",
-      "last_name": "Piggin",
-      "email": "lpiggin4@wisc.edu",
-      "gender": "Female",
-      "address": "75441 Longview Road"
-    },
-    {
       "id": 6,
       "first_name": "Lora",
       "last_name": "Beagin",
       "email": "lbeagin5@ihg.com",
       "gender": "Female",
       "address": "7590 Hintze Drive"
-    },
-    {
-      "id": 7,
-      "first_name": "Bonnibelle",
-      "last_name": "Dibson",
-      "email": "bdibson6@skype.com",
-      "gender": "Female",
-      "address": "074 Iowa Plaza"
-    },
-    {
-      "id": 8,
-      "first_name": "Meyer",
-      "last_name": "Germon",
-      "email": "mgermon7@yandex.ru",
-      "gender": "Male",
-      "address": "26693 Sage Avenue"
-    },
-    {
-      "id": 9,
-      "first_name": "Haze",
-      "last_name": "Occleshaw",
-      "email": "hoccleshaw8@mail.ru",
-      "gender": "Male",
-      "address": "4 Milwaukee Junction"
     },
     {
       "id": 10,
@@ -81,14 +17,6 @@
       "address": "614 1st Point"
     },
     {
-      "id": 11,
-      "first_name": "Fionna",
-      "last_name": "Di Giorgio",
-      "email": "fdigiorgioa@creativecommons.org",
-      "gender": "Female",
-      "address": "6 Packers Place"
-    },
-    {
       "id": 12,
       "first_name": "Sylvia",
       "last_name": "Erratt",
@@ -97,28 +25,12 @@
       "address": "9566 Forster Pass"
     },
     {
-      "id": 13,
-      "first_name": "Yvonne",
-      "last_name": "Craggs",
-      "email": "ycraggsc@amazon.de",
-      "gender": "Female",
-      "address": "11693 Tennyson Avenue"
-    },
-    {
       "id": 14,
       "first_name": "Bondie",
       "last_name": "Kitteringham",
       "email": "bkitteringhamd@noaa.gov",
       "gender": "Male",
       "address": "1 Ronald Regan Point"
-    },
-    {
-      "id": 15,
-      "first_name": "Jud",
-      "last_name": "Gonoude",
-      "email": "jgonoudee@mayoclinic.com",
-      "gender": "Male",
-      "address": "58817 Annamark Court"
     },
     {
       "id": 16,
@@ -151,22 +63,6 @@
       "email": "thannayi@themeforest.net",
       "gender": "Male",
       "address": "99785 Milwaukee Road"
-    },
-    {
-      "id": 20,
-      "first_name": "Morry",
-      "last_name": "Covill",
-      "email": "mcovillj@youtube.com",
-      "gender": "Male",
-      "address": "3 Red Cloud Junction"
-    },
-    {
-      "id": 21,
-      "first_name": "Emily",
-      "last_name": "Lefridge",
-      "email": "elefridgek@google.cn",
-      "gender": "Female",
-      "address": "56 Golf Course Court"
     },
     {
       "id": 22,

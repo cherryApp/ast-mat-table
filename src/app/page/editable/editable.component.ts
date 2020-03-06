@@ -19,7 +19,8 @@ export class EditableComponent implements OnInit, OnDestroy {
     'last_name',
     'gender',
     'email',
-    'address'
+    'address',
+    'actions',
   ];
   pageSizes: number[] = [5, 10, 25, 100];
   dataSubscription: Subscription;
@@ -39,11 +40,12 @@ export class EditableComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.dataSource.paginator = this.paginator;
-    this.dataSubscription = this.userService.get().subscribe(
+    this.dataSubscription = this.userService.watcher$.subscribe(
       users => {
         this.dataSource.data = (users as unknown as User[]);
       }
     );
+    this.userService.refresh();
 
     this.dataSource.filterPredicate = (data: User, filter: string) => {
       const key = this.currentFilterKey || '';
@@ -54,6 +56,17 @@ export class EditableComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.dataSubscription.unsubscribe();
+  }
+
+  onEdit(user: User): void {
+    console.log(user);
+  }
+
+  onDelete(user: User): void {
+    this.userService.delete(user.id).toPromise().then(
+      response => console.log(response),
+      err => console.error(err)
+    );
   }
 
 }
