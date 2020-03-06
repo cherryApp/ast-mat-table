@@ -20,6 +20,7 @@ import { HomeComponent } from './page/home/home.component';
 import { BasicComponent } from './page/basic/basic.component';
 import { PaginatorComponent } from './page/paginator/paginator.component';
 import { FilterComponent } from './page/filter/filter.component';
+import { EditableComponent } from './page/editable/editable.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FilterComponent } from './page/filter/filter.component';
     HomeComponent,
     BasicComponent,
     PaginatorComponent,
-    FilterComponent
+    FilterComponent,
+    EditableComponent
   ],
   imports: [
     BrowserModule,
