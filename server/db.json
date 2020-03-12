@@ -2,7 +2,7 @@
   "users": [
     {
       "id": 1,
-      "first_name": "Earle",
+      "first_name": "Ballmer",
       "last_name": "Southam",
       "email": "esoutham0@mtv.com",
       "gender": "Male",
@@ -21,12 +21,12 @@
       "first_name": "Cally",
       "last_name": "O'Sheilds",
       "email": "cosheilds2@technorati.com",
-      "gender": "Female",
+      "gender": "Male",
       "address": "47 Marquette Alley"
     },
     {
       "id": 4,
-      "first_name": "Stefano",
+      "first_name": "Alfonso",
       "last_name": "Lett",
       "email": "slett3@networksolutions.com",
       "gender": "Male",

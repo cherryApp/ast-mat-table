@@ -19,16 +19,15 @@
         The actual rendered columns are set as a property on the row definition" -->
 
   <!-- Define columns. -->
-  <ng-container *ngFor="let col of displayedColumns" [matColumnDef]="col">
-    <th mat-header-cell *matHeaderCellDef> {{ col | titlecase }} </th>
+  <ng-container *ngFor="let col of columnList" [matColumnDef]="col.key">
+    <th mat-header-cell *matHeaderCellDef> {{ col.title }} </th>
     <td mat-cell *matCellDef="let user">
-      <div *ngIf="col !== 'actions'; else actionBlock">
-        {{user[col]}}
-      </div>
+      <app-cell-editor [model]="user" [column]="col" *ngIf="col.key !== 'actions'; else actionBlock">
+      </app-cell-editor>
       <ng-template #actionBlock>
         <div class="mat-btn-group">
           <button (click)="onEdit(user)" class="info" mat-raised-button>
-            <mat-icon aria-hidden="false">edit</mat-icon>
+            <mat-icon aria-hidden="false">{{ user.editable ? 'check' : 'edit' }}</mat-icon>
           </button>
           <button (click)="onDelete(user)" class="danger" mat-raised-button>
             <mat-icon aria-hidden="false">delete</mat-icon>

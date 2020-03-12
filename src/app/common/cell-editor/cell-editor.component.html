@@ -1,0 +1,16 @@
+<mat-form-field [ngSwitch]="column.controlType" class="editor-field">
+  <select
+    *ngSwitchCase="'select'"
+    [disabled]="!model.editable || column.disabled"
+    [(ngModel)]="model[column.key]"
+    matNativeControl>
+      <option value="">choose one ...</option>
+      <option *ngFor="let o of column.options" [value]="o.value">
+        {{ o.text }}
+      </option>
+  </select>
+  <input
+    *ngSwitchDefault
+    [disabled]="!model.editable || column.disabled"
+    matInput [(ngModel)]="model[column.key]">
+</mat-form-field>

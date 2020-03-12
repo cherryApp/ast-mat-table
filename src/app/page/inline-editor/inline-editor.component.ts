@@ -1,9 +1,19 @@
 import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { User } from 'src/app/model/user';
-import { Subscription } from 'rxjs';
+import { Subscription, BehaviorSubject } from 'rxjs';
 import { MatPaginator } from '@angular/material/paginator';
 import { UserService } from 'src/app/service/user.service';
+
+interface IColumn {
+  key: string;
+  title: string;
+  disabled?: boolean;
+  controlType?: 'input' | 'select' | 'textarea';
+  type?: string;
+  options?: {value: any, text: string}[];
+  editable?: boolean;
+}
 
 @Component({
   selector: 'app-inline-editor',
@@ -13,15 +23,17 @@ import { UserService } from 'src/app/service/user.service';
 export class InlineEditorComponent implements OnInit, OnDestroy {
 
   dataSource: MatTableDataSource<User> = new MatTableDataSource<User>();
-  displayedColumns: string[] = [
-    'id',
-    'first_name',
-    'last_name',
-    'gender',
-    'email',
-    'address',
-    'actions',
+  columnList: IColumn[] = [
+    {key: 'id', title: 'Id', disabled: true},
+    {key: 'first_name', title: 'First name'},
+    {key: 'last_name', title: 'Last name'},
+    {key: 'gender', title: 'Gender', controlType: 'select',
+      options: [{value: 'Male', text: 'Male'}, {value: 'Female', text: 'Female'}]},
+    {key: 'email', title: 'Email'},
+    {key: 'address', title: 'Address'},
+    {key: 'actions', title: 'Actions'},
   ];
+  displayedColumns: string[] = this.columnList.map( col => col.key );
   pageSizes: number[] = [5, 10, 25, 100];
   dataSubscription: Subscription;
 
@@ -59,7 +71,15 @@ export class InlineEditorComponent implements OnInit, OnDestroy {
   }
 
   onEdit(user: User): void {
-    console.log(user);
+    if (user.editable) {
+      delete user.editable;
+      this.userService.update(user.id, user).toPromise().then(
+        response => console.log(response),
+        err => console.error(err)
+      );
+    } else {
+      user.editable = true;
+    }
   }
 
   onDelete(user: User): void {

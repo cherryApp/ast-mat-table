@@ -1,0 +1,16 @@
+::ng-deep .mat-form-field.editor-field {
+  padding: 0;
+  margin: 0;
+  max-width: 6rem;
+  input, select, textarea {
+    overflow: hidden;
+  }
+  &.mat-form-field-disabled {
+    .mat-input-element {
+        color: rgb(2, 2, 2);
+    }
+    .mat-form-field-underline {
+      display: none;
+    }
+  }
+}

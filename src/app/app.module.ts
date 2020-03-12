@@ -23,6 +23,7 @@ import { PaginatorComponent } from './page/paginator/paginator.component';
 import { FilterComponent } from './page/filter/filter.component';
 import { EditableComponent } from './page/editable/editable.component';
 import { InlineEditorComponent } from './page/inline-editor/inline-editor.component';
+import { CellEditorComponent } from './common/cell-editor/cell-editor.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { InlineEditorComponent } from './page/inline-editor/inline-editor.compon
     PaginatorComponent,
     FilterComponent,
     EditableComponent,
-    InlineEditorComponent
+    InlineEditorComponent,
+    CellEditorComponent
   ],
   imports: [
     BrowserModule,
