@@ -5,6 +5,7 @@ import { BasicComponent } from './page/basic/basic.component';
 import { PaginatorComponent } from './page/paginator/paginator.component';
 import { FilterComponent } from './page/filter/filter.component';
 import { EditableComponent } from './page/editable/editable.component';
+import { InlineEditorComponent } from './page/inline-editor/inline-editor.component';
 
 
 const routes: Routes = [
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: 'editable',
     component: EditableComponent,
+  },
+  {
+    path: 'inline-editor',
+    component: InlineEditorComponent,
   },
   {
     path: '**',

@@ -22,6 +22,7 @@ import { BasicComponent } from './page/basic/basic.component';
 import { PaginatorComponent } from './page/paginator/paginator.component';
 import { FilterComponent } from './page/filter/filter.component';
 import { EditableComponent } from './page/editable/editable.component';
+import { InlineEditorComponent } from './page/inline-editor/inline-editor.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { EditableComponent } from './page/editable/editable.component';
     BasicComponent,
     PaginatorComponent,
     FilterComponent,
-    EditableComponent
+    EditableComponent,
+    InlineEditorComponent
   ],
   imports: [
     BrowserModule,
