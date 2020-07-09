@@ -8,3 +8,5 @@
 - Run json-server: `json-server ./server/db.json --watch`
 - Run angular server: `ng server -o`
 - That's it.
+
+## Theme switcher
