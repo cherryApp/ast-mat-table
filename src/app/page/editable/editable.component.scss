@@ -10,7 +10,8 @@
   }
 }
 
-.mat-btn-group button {
+.mat-btn-group button,
+.mat-btn-group a {
   border-radius: 0;
   margin: 0 1px;
   &:first-child {

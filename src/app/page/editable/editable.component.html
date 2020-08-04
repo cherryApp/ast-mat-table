@@ -27,9 +27,9 @@
       </div>
       <ng-template #actionBlock>
         <div class="mat-btn-group">
-          <button (click)="onEdit(user)" class="info" mat-raised-button>
+          <a [routerLink]="['user-editor', user.id]" class="info" mat-raised-button>
             <mat-icon aria-hidden="false">edit</mat-icon>
-          </button>
+          </a>
           <button (click)="onDelete(user)" class="danger" mat-raised-button>
             <mat-icon aria-hidden="false">delete</mat-icon>
           </button>

@@ -25,6 +25,7 @@ import { FilterComponent } from './page/filter/filter.component';
 import { EditableComponent } from './page/editable/editable.component';
 import { InlineEditorComponent } from './page/inline-editor/inline-editor.component';
 import { CellEditorComponent } from './common/cell-editor/cell-editor.component';
+import { UserEditorComponent } from './page/user-editor/user-editor.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { CellEditorComponent } from './common/cell-editor/cell-editor.component'
     FilterComponent,
     EditableComponent,
     InlineEditorComponent,
-    CellEditorComponent
+    CellEditorComponent,
+    UserEditorComponent
   ],
   imports: [
     BrowserModule,
