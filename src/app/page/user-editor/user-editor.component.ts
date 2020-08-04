@@ -15,7 +15,7 @@ import { USER_PROVIDERS, USER_INFO } from 'src/app/service/user.providers';
 export class UserEditorComponent implements OnInit {
 
   constructor(
-    @Inject(USER_INFO) private user$: Observable<User | User[]>,
+    @Inject(USER_INFO) readonly user$: Observable<User | User[]>,
   ) { }
 
   ngOnInit() {}
