@@ -26,6 +26,7 @@ import { EditableComponent } from './page/editable/editable.component';
 import { InlineEditorComponent } from './page/inline-editor/inline-editor.component';
 import { CellEditorComponent } from './common/cell-editor/cell-editor.component';
 import { UserEditorComponent } from './page/user-editor/user-editor.component';
+import { Async2Pipe } from './pipe/async2.pipe';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { UserEditorComponent } from './page/user-editor/user-editor.component';
     EditableComponent,
     InlineEditorComponent,
     CellEditorComponent,
-    UserEditorComponent
+    UserEditorComponent,
+    Async2Pipe
   ],
   imports: [
     BrowserModule,
