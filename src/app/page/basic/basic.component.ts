@@ -1,6 +1,7 @@
 import { Component, OnInit, DoCheck, AfterViewChecked } from '@angular/core';
 import { UserService } from 'src/app/service/user.service';
 import { User } from 'src/app/model/user';
+import { Observable, interval } from 'rxjs';
 
 @Component({
   selector: 'app-basic',
@@ -9,7 +10,7 @@ import { User } from 'src/app/model/user';
 })
 export class BasicComponent implements OnInit, DoCheck, AfterViewChecked {
 
-  dataSource$: User[] = (this.userService.get() as unknown as User[]);
+  dataSource$: Observable<User | User[]> = this.userService.get();
   displayedColumns: string[] = [
     'id',
     'first_name',
@@ -18,13 +19,13 @@ export class BasicComponent implements OnInit, DoCheck, AfterViewChecked {
     'email',
     'address'
   ];
+  filter = '';
 
   constructor(
     private userService: UserService,
   ) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   ngDoCheck() {
     // tslint:disable-next-line: no-console
