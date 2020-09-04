@@ -128,5 +128,8 @@
       }
     }
   },
-  "defaultProject": "ast-mat-table"
+  "defaultProject": "ast-mat-table",
+  "cli": {
+    "analytics": "0e6651f7-7562-43bf-8621-997cfedefbc2"
+  }
 }
