@@ -10,3 +10,6 @@
 - That's it.
 
 ## Theme switcher
+
+## Async2
+This is a new implementation for Angular async pipe.
