@@ -19,7 +19,7 @@ export class Async2Pipe implements OnDestroy, PipeTransform {
       switchAll(),
       distinctUntilChanged(),
       tap( v => {
-        console.log(`CHANGED ${counter}`, v);
+        // console.log(`CHANGED ${counter}`, v);
         this.value = v;
         this.ref.detectChanges();
       })
@@ -35,7 +35,7 @@ export class Async2Pipe implements OnDestroy, PipeTransform {
 
   transform(obj: Observable<any> | Promise<any> | null | undefined): any {
     if (isObservable(obj) || isPromise(obj)) {
-      console.log(`INPUT ${++counter}`, obj);
+      // console.log(`INPUT ${++counter}`, obj);
       this.observablesToSubscribeSubject.next( from(obj) );
       return this.value;
     }
