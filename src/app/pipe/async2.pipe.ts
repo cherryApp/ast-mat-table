@@ -6,7 +6,7 @@ const isPromise = (obj: any) => {
   return obj.then && obj.resolve;
 };
 
-let counter = 0;
+// let counter = 0;
 
 @Pipe({ name: 'async2', pure: false })
 export class Async2Pipe implements OnDestroy, PipeTransform {
