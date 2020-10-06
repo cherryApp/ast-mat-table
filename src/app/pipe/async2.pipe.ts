@@ -7,7 +7,8 @@ const isPromise = (obj: any) => {
 };
 
 @Pipe({
-  name: 'async2'
+  name: 'async2',
+  pure: false
 })
 export class Async2Pipe implements PipeTransform, OnDestroy {
   value: any = null;
@@ -19,7 +20,6 @@ export class Async2Pipe implements PipeTransform, OnDestroy {
       switchAll(),
       distinctUntilChanged(),
       tap( v => {
-        console.log(v);
         this.value = v;
         this.ref.detectChanges();
       })
